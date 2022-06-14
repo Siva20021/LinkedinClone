@@ -1,18 +1,18 @@
-import React from 'react'
+import React from "react";
 import InfoRoundedIcon from "@mui/icons-material/InfoRounded";
 import FiberManualRecordRoundedIcon from "@mui/icons-material/FiberManualRecordRounded";
 import Image from "next/image";
-import TimeAgo from "timeago-react";
-function Widgets({articles}) {
+import TimeAgo from "react-timeago";
+function Widgets({ articles }) {
   return (
-    <div className='hidden xl:inline space-y-2'>
-        {/*NEWS*/}
-        <div className='bg-white dark:bg-[#1D2226] py-2.5 rounded-lg space-y-2 w-11/12 overflow-hidden border-gray-300 dark:border-none '>
-            <div className='flex items-center justify-between font-bold px-2.5 '>
-                <h4>Linkedin News</h4>
-                <InfoRoundedIcon className="h-5 w-5" />
-            </div>
-            <div className="space-y-1">
+    <div className="hidden xl:inline space-y-2">
+      {/*NEWS*/}
+      <div className="bg-white dark:bg-[#1D2226] py-2.5 rounded-lg space-y-2 w-11/12 overflow-hidden border-gray-300 dark:border-none ">
+        <div className="flex items-center justify-between font-bold px-2.5 ">
+          <h4>Linkedin News</h4>
+          <InfoRoundedIcon className="h-5 w-5" />
+        </div>
+        <div className="space-y-1">
           {articles.slice(0, 5).map((article) => (
             <div
               key={article.url}
@@ -31,21 +31,19 @@ function Widgets({articles}) {
             </div>
           ))}
         </div>
-            
+      </div>
+      <div className="bg-white dark:bg-[#1D2226] w-11/12 h-64 px-2.5 rounded-lg sticky top-20 border border-gray-300 dark:border-none">
+        <div className="relative w-full h-full">
+          <Image
+            src="https://rb.gy/kbfeaa"
+            layout="fill"
+            objectFit="contain"
+            priority
+          />
         </div>
-        <div className="bg-white dark:bg-[#1D2226] w-11/12 h-64 px-2.5 rounded-lg sticky top-20 border border-gray-300 dark:border-none">
-            <div className='relative w-full h-full'>
-                <Image
-                src="https://rb.gy/kbfeaa"
-                layout="fill"
-                objectFit="contain"
-                priority
-                />
-            </div>
-        </div>
-
+      </div>
     </div>
-  )
+  );
 }
 
-export default Widgets
+export default Widgets;
