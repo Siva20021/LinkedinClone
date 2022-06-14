@@ -11,7 +11,7 @@ import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 import ReplyRoundedIcon from "@mui/icons-material/ReplyRounded";
 import CommentOutlinedIcon from "@mui/icons-material/CommentOutlined";
 import { modalState, modalTypeState } from "../atoms/modalAtom";
-import TimeAgo from "timeago-react";
+import TimeAgo from "react-timeago";
 
 import { useSession } from "next-auth/react";
 function Post({post,modalPost}) {
